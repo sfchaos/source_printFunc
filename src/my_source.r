@@ -211,10 +211,10 @@ my.source <- function (file, local = FALSE, echo = verbose, print.eval = echo,
                 cat(".... mode(ei[[1L]])=", mode(ei[[1L]]), "; paste(curr.fun)=")
                 utils::str(paste(curr.fun))
             }
-						# @author sfchaos 
-						# @date 2015-07-13
-						# @comment
-            if (print.eval && class(eval(ei)) == "function") {
+            # @author sfchaos 
+            # @date 2015-07-13
+            # @comment print function definition
+            if (print.eval && is.function(eval(ei))) {
 							print(ei[[1]])
 							message("")
 						}
